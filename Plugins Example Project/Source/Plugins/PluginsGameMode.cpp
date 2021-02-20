@@ -1,7 +1,8 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 
-#include "Plugins.h"
 #include "PluginsGameMode.h"
+#include "Plugins.h"
+
 #include "PluginsCharacter.h"
 
 APluginsGameMode::APluginsGameMode()

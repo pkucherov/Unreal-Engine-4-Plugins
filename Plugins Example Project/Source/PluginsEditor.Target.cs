@@ -5,21 +5,10 @@ using System.Collections.Generic;
 
 public class PluginsEditorTarget : TargetRules
 {
-	public PluginsEditorTarget(TargetInfo Target)
+	public PluginsEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-	}
-
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.Add("Plugins");
+        	DefaultBuildSettings = BuildSettingsVersion.V2;
+		ExtraModuleNames.AddRange( new string[] { "Plugins" } );
 	}
 }

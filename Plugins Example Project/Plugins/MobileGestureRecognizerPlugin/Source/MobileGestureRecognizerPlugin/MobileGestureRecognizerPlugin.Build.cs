@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class MobileGestureRecognizerPlugin : ModuleRules
 {
-	public MobileGestureRecognizerPlugin(TargetInfo Target)
+	public MobileGestureRecognizerPlugin(ReadOnlyTargetRules Target) : base(Target)
 	{
 		
 		PublicIncludePaths.AddRange(

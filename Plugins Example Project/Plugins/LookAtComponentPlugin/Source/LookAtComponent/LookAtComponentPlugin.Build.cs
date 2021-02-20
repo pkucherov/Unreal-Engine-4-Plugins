@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class LookAtComponentPlugin : ModuleRules
 {
-	public LookAtComponentPlugin(TargetInfo Target)
+	public LookAtComponentPlugin(ReadOnlyTargetRules Target) : base(Target)
 	{
 		
 		PublicIncludePaths.AddRange(

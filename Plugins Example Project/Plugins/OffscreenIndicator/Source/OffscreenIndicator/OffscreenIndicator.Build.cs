@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class OffscreenIndicator : ModuleRules
 {
-	public OffscreenIndicator(TargetInfo Target)
+	public OffscreenIndicator(ReadOnlyTargetRules Target) : base(Target)
 	{
 		
 		PublicIncludePaths.AddRange(

@@ -1,7 +1,9 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 
-#include "Plugins.h"
 #include "PluginsCharacter.h"
+#include "Runtime/Engine/Classes/Components/InputComponent.h"
+#include "Plugins.h"
+
 
 //////////////////////////////////////////////////////////////////////////
 // APluginsCharacter
@@ -44,27 +46,27 @@ APluginsCharacter::APluginsCharacter()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void APluginsCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
+void APluginsCharacter::SetupPlayerInputComponent(UInputComponent* tInputComponent)
 {
 	// Set up gameplay key bindings
-	check(InputComponent);
-	InputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	InputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	check(tInputComponent);
+	tInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	tInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	InputComponent->BindAxis("MoveForward", this, &APluginsCharacter::MoveForward);
-	InputComponent->BindAxis("MoveRight", this, &APluginsCharacter::MoveRight);
+	tInputComponent->BindAxis("MoveForward", this, &APluginsCharacter::MoveForward);
+	tInputComponent->BindAxis("MoveRight", this, &APluginsCharacter::MoveRight);
 
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
-	InputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-	InputComponent->BindAxis("TurnRate", this, &APluginsCharacter::TurnAtRate);
-	InputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
-	InputComponent->BindAxis("LookUpRate", this, &APluginsCharacter::LookUpAtRate);
+	tInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	tInputComponent->BindAxis("TurnRate", this, &APluginsCharacter::TurnAtRate);
+	tInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	tInputComponent->BindAxis("LookUpRate", this, &APluginsCharacter::LookUpAtRate);
 
 	// handle touch devices
-	InputComponent->BindTouch(IE_Pressed, this, &APluginsCharacter::TouchStarted);
-	InputComponent->BindTouch(IE_Released, this, &APluginsCharacter::TouchStopped);
+	tInputComponent->BindTouch(IE_Pressed, this, &APluginsCharacter::TouchStarted);
+	tInputComponent->BindTouch(IE_Released, this, &APluginsCharacter::TouchStopped);
 }
 
 

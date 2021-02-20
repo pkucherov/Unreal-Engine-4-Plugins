@@ -37,7 +37,7 @@ using UnrealBuildTool;
 
 public class ScalabilityLibrary : ModuleRules
 {
-	public ScalabilityLibrary(TargetInfo Target)
+	public ScalabilityLibrary(ReadOnlyTargetRules Target) : base(Target)
 	{
 		
 		PublicIncludePaths.AddRange(
