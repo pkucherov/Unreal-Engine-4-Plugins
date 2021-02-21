@@ -9,5 +9,15 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
+	],
+	"Plugins": [
+		{
+			"Name": "MobileGestureRecognizerPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "ScalabilityLibrary",
+			"Enabled": true
+		}
 	]
 }

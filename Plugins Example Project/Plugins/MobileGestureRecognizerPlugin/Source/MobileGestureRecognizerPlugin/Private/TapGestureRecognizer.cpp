@@ -1,5 +1,6 @@
 // 2015  MartianCraft, LLC, See header file for license & copyright notice
 
+#include "TapGestureRecognizer.h"
 #include "MobileGestureRecognizerPluginPrivatePCH.h"
 
 UTapGestureRecognizer::UTapGestureRecognizer() 	: Super()
@@ -127,7 +128,7 @@ void UTapGestureRecognizer::TickComponent(float DeltaTime, enum ELevelTick TickT
 	{
 		NumberOfFingersInTap = 0;
 		int32 HighestTapCount = 0;
-		int32 FirstIndexMatchingHighestTapCount;
+		int32 FirstIndexMatchingHighestTapCount = 0;
 		
 		// Find the highest tap count for a finger
 		for (int32 Index = 0; Index < EKeys::NUM_TOUCH_KEYS; Index++)

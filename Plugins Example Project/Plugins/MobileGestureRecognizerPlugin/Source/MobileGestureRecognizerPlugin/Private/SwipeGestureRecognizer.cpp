@@ -1,5 +1,6 @@
 // ©2015 MartianCraft, LLC, See header file for license & copyright notice
 
+#include "SwipeGestureRecognizer.h"
 #include "MobileGestureRecognizerPluginPrivatePCH.h"
 
 USwipeGestureRecognizer::USwipeGestureRecognizer() 	: Super()
@@ -16,7 +17,7 @@ void USwipeGestureRecognizer::ResetGesture()
 	Super::ResetGesture();
 	
 	TouchCount = 0;
-	for (int32 Index = 0; Index < ARRAY_COUNT(SwipeFound); Index++)
+	for (int32 Index = 0; Index < UE_ARRAY_COUNT(SwipeFound); Index++)
 	{
 		SwipeFound[Index] = ESwipeType::SwipeNone;
 	}
@@ -173,7 +174,7 @@ void USwipeGestureRecognizer::DelayHandleSwipe()
 {
 	int32 FingerCount = 0;
 	
-	for (int32 Index = 0; Index < ARRAY_COUNT(SwipeFound); Index++)
+	for (int32 Index = 0; Index < UE_ARRAY_COUNT(SwipeFound); Index++)
 	{
 		if (SwipeFound[Index] == SwipeType)
 		{
@@ -206,7 +207,7 @@ void USwipeGestureRecognizer::TickComponent(float DeltaTime, enum ELevelTick Tic
 	ESwipeType FoundSwipe = ESwipeType::SwipeNone;
 	
 	// Look for the first swipe of any type
-	for (int32 Index = 0; Index < ARRAY_COUNT(SwipeFound); Index++)
+	for (int32 Index = 0; Index < UE_ARRAY_COUNT(SwipeFound); Index++)
 	{
 		if (SwipeFound[Index] != ESwipeType::SwipeNone)
 		{

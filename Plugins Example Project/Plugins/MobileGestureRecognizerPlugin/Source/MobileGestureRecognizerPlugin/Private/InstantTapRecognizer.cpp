@@ -1,5 +1,5 @@
 // 2015  MartianCraft, LLC, See header file for license & copyright notice
-
+#include "InstantTapRecognizer.h"
 #include "MobileGestureRecognizerPluginPrivatePCH.h"
 
 void UInstantTapRecognizer::TouchBegan(int32 FingerIndex, FVector2D Position)

@@ -1,6 +1,6 @@
 // 2015  MartianCraft, LLC, See header file for license & copyright notice
 
-
+#include "MobileGestureRecognizerPlugin.h"
 #include "MobileGestureRecognizerPluginPrivatePCH.h"
 
 #define LOCTEXT_NAMESPACE "FMobileGestureRecognizerPluginModule"

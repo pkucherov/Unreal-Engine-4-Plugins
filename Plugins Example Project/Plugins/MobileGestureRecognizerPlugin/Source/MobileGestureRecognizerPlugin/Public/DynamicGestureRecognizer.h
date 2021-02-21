@@ -34,6 +34,7 @@
 // =================================================================================================
 
 #pragma once
+#include "GestureRecognizerComponent.h"
 
 #include "DynamicGestureRecognizer.generated.h"
 

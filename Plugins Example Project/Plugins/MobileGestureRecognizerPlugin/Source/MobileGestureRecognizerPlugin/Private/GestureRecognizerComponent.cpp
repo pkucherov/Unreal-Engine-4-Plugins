@@ -1,5 +1,5 @@
 // 2015  MartianCraft, LLC, See header file for license & copyright notice
-
+#include "GestureRecognizerComponent.h"
 #include "MobileGestureRecognizerPluginPrivatePCH.h"
 
 UGestureRecognizerComponent::UGestureRecognizerComponent()
@@ -119,7 +119,7 @@ void UGestureRecognizerComponent::TouchEnded(int32 FingerIndex)
 void UGestureRecognizerComponent::ResetGesture()
 {
 	CurrentTouchCount = PreviousTouchCount = MaxFingersThisGesture = 0;
-	for (int32 Index = 0; Index < ARRAY_COUNT(TouchData); Index++)
+	for (int32 Index = 0; Index < UE_ARRAY_COUNT(TouchData); Index++)
 	{
 		TouchData[Index].TouchPoints.Empty();
 		TouchData[Index].FirstTouchTime = 0;
@@ -147,7 +147,7 @@ void UGestureRecognizerComponent::UpdateStoredTouchData(const FVector (&Touches)
 		FirstFingerTouchTime = now;
 	}
 	
-	for (int32 Index = 0; Index < ARRAY_COUNT(TouchData); Index++)
+	for (int32 Index = 0; Index < UE_ARRAY_COUNT(TouchData); Index++)
 	{
 		
 		// If it's a touch, store the position of the touch

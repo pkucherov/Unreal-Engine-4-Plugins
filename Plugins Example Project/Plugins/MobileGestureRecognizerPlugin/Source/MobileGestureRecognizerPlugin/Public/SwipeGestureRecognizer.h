@@ -55,7 +55,7 @@ enum class ESwipeType : uint8
 	SwipeFromBottomEdge UMETA(DisplayName="Swipe up from Bottom Edge")
 };
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FGestureSupportedSwipeTypes
 {
 	GENERATED_USTRUCT_BODY()

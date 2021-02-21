@@ -1,5 +1,6 @@
 // 2015  MartianCraft, LLC, See header file for license & copyright notice
 
+#include "ScalabilityFunctionLibrary.h"
 #include "ScalabilityLibraryPrivatePCH.h"
 
 #define MIN_SCREEN_WIDTH 1024

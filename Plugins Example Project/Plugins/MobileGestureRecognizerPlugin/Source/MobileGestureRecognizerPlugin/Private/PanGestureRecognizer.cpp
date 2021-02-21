@@ -1,5 +1,6 @@
 // 2015  MartianCraft, LLC, See header file for license & copyright notice
 
+#include "PanGestureRecognizer.h"
 #include "MobileGestureRecognizerPluginPrivatePCH.h"
 
 UPanGestureRecognizer::UPanGestureRecognizer() 	: Super()

@@ -1,5 +1,6 @@
 // 2015  MartianCraft, LLC, See header file for license & copyright notice
 
+#include "GestureMathLibrary.h"
 #include "MobileGestureRecognizerPluginPrivatePCH.h"
 
 float UGestureMathLibrary::AngleBetweenLines(const FVector2D& Line1Start, const FVector2D& Line1End, const FVector2D& Line2Start, const FVector2D& Line2End)

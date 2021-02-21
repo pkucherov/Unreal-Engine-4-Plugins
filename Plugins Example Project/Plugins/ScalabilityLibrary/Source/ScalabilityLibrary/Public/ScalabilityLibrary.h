@@ -35,8 +35,6 @@
 
 #pragma once
 
-#include "ModuleManager.h"
-
 
 
 class FScalabilityLibraryModule : public IModuleInterface
